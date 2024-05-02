@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+.banner {
+  padding: 50px;
+  text-align: center;
+  background-image: url('https://source.unsplash.com/four-reel-films-lying-on-white-table-Lq6rcifGjOU');
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 2px rgb(37, 37, 37);
+    font-weight: 700px;
+  }
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700px;
+}
