@@ -1,26 +1,27 @@
 <div class="container">
 <h1><%= @list.name %></h1>
 
-<div class="container">
+<%= link_to "Add a new movie", new_list_bookmark_path(@list) %>
+
+<div class="d-flex">
 
 <% @list.bookmarks.each do |bookmark| %>
-<div class="card w-25">
+<div class="card w-25 m-3">
 <img src="https://source.unsplash.com/random/1000x500" class="card-img-top" alt="random image">
 <div class="card-body">
 <h5 class="card-title"><%= bookmark.movie.title %>  <%= bookmark.movie.rating %></h5>
     <p class="card-text"><%= bookmark.movie.overview %></p>
     <ul class="list-group list-group-flush">
-    <% @bookmarks.each do |bookmark| %>
     <li class="list-group-item"><%= bookmark.comment %></li>
-    <% end %>
   </ul>
+  <p><%= link_to "Delete movie", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></p>
 </div>
 </div>
 <% end %>
 
 </div>
 
-
+<%= link_to "Back to all lists", lists_path %>
 
 
 
