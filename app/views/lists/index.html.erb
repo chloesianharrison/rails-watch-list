@@ -1,15 +1,23 @@
+<nav class="d-flex navbar-lewagon p-3" >
+  <i class="fa-solid fa-film"></i>
+  <div>
+  <a href="#">My lists</a>
+  <%= link_to "New list", new_list_path %>
+  </div>
+</nav>
 <div class="banner">
-<h1>Like a movie? Save it here</h1>
+<h1>Movies, your way</h1>
+</div>
+<div class="mt-3 mb-3 container w-75">
+<div class="d-flex justify-content-between">
+<h2 class="m-4"> My Lists</h2>
+
+<%= link_to "Add new list", new_list_path, class: "btn button" %>
 </div>
 
-<h1 class="mt-3">Lists</h1>
-
-<%= link_to "Add new list", new_list_path %>
-
-<div class="container">
-<div class="d-flex m-2">
+<div class="d-flex m-2 justify-content-around">
   <% @lists.each do |list| %>
-  <div class="card card-title p-5">
+  <div class="card m-3 card-title p-5">
     <h2><%= link_to list.name, list_path(list) %></h2>
   </div>
   <% end %>
