@@ -1,27 +1,40 @@
-<div class="container">
-<h1><%= @list.name %></h1>
+  <nav class="d-flex navbar-lewagon p-3 bg-light" >
+    <i class="fa-solid fa-film "></i>
 
-<%= link_to "Add a new movie", new_list_bookmark_path(@list) %>
+    <div class="me-3">
+      <%= link_to "My lists", lists_path, class: "button" %>
+      <%= link_to "New movie", new_list_bookmark_path(@list), class: "button" %>
+      <%= link_to "New list", new_list_path, class: "button" %>
+    </div>
+  </nav>
+<div class="container">
+<h2><%= @list.name %></h2>
+
+<div class="list-card pcard">
+</div>
+
+<div class="list-card lcard">
+</div>
 
 <div class="d-flex">
 
 <% @list.bookmarks.each do |bookmark| %>
-<div class="card w-25 m-3">
-<img src="https://source.unsplash.com/random/1000x500" class="card-img-top" alt="random image">
+<div class="card w-50 m-3">
+<%= image_tag bookmark.movie.poster_url, class: "card-img-top" %>
 <div class="card-body">
 <h5 class="card-title"><%= bookmark.movie.title %>  <%= bookmark.movie.rating %></h5>
     <p class="card-text"><%= bookmark.movie.overview %></p>
     <ul class="list-group list-group-flush">
     <li class="list-group-item"><%= bookmark.comment %></li>
-  </ul>
-  <p><%= link_to "Delete movie", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></p>
+  <%= link_to "Delete", bookmark_path(bookmark), class: "button", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+</ul>
 </div>
 </div>
 <% end %>
 
 </div>
 
-<%= link_to "Back to all lists", lists_path %>
+
 
 
 

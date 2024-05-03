@@ -20,22 +20,27 @@ nav a {
   }
 }
 
+h1 {
+  color: white;
+}
 i {
   font-size: 30px;
   margin-left: 30px;
 }
 
 h2 {
-  color: black;
+  color: white;
   font-weight: 700px;
   font-size: 50px;
   font-family: $body-font;
-  font-weight: 600;
-  letter-spacing: 0em;
+  font-weight: 700;
+  letter-spacing: -.1em;
+  word-spacing: 0em;
 }
 
 .card {
   background-color: white;
+  border: 0px;
 
 
   a {
@@ -47,6 +52,30 @@ h2 {
 }
 }
 
-#banbox {
+.banbox {
   position: absolute;
+  top: 38rem;
+  left: 3rem;
+  // background-color: rgb(108, 71, 145);
+}
+
+.list-card {
+  background-color: rgb(108, 71, 145);
+  border-radius: 20px;
+}
+
+.pcard {
+  position: absolute;
+  top: 3.9rem;
+  left: 3rem;
+  padding: 25%;
+  z-index: -2;
+}
+
+.lcard {
+  position: absolute;
+  top: 40rem;
+  right: 0rem;
+  padding: 25%;
+  z-index: -2;
 }
