@@ -1,25 +1,39 @@
-<nav class="d-flex navbar-lewagon p-3" >
-  <i class="fa-solid fa-film"></i>
-  <div>
-  <a href="#">My lists</a>
-  <%= link_to "New list", new_list_path %>
+<div class="d-flex flex-column">
+<div class=row>
+<nav class="d-flex navbar-lewagon p-3 bg-light" >
+  <i class="fa-solid fa-film "></i>
+  <div class="me-3">
+  <a href="#" class="button">My lists</a>
+  <%= link_to "New list", new_list_path, class: "button" %>
   </div>
 </nav>
+</div>
+
+<div class=row>
 <div class="banner">
-<h1>Movies, your way</h1>
-</div>
-<div class="mt-3 mb-3 container w-75">
-<div class="d-flex justify-content-between">
-<h2 class="m-4"> My Lists</h2>
+<%# <h1 class="text-start">YOUR MOVIES</h1>
+<h1 class="text-start">STORED YOUR WAY</h1> %>
+<%= image_tag "YOUR MOVIES STORED YOUR WAY.jpg" %>
 
-<%= link_to "Add new list", new_list_path, class: "btn button" %>
 </div>
+</div>
+<div class=row" >
+<div class="d-flex align-items-end flex-column justify-content-end col-md-11 offset-md-2"  >
+  <div class="mt-3 mb-3 container w-75 ms- bg-light">
+    <div class="d-flex justify-content-between ">
+    <h2 class="m-4"> My Lists</h2>
 
-<div class="d-flex m-2 justify-content-around">
-  <% @lists.each do |list| %>
-  <div class="card m-3 card-title p-5">
-    <h2><%= link_to list.name, list_path(list) %></h2>
+    <%= link_to "Add new list", new_list_path, class: "btn button new" %>
+    </div>
+
+    <div class="d-flex m-2 justify-content-around flex-wrap">
+      <% @lists.each do |list| %>
+      <div class="card  m-3 card-title p-5 list" style="max-width: 20rem;">
+        <p><%= link_to list.name, list_path(list) %></p>
+      </div>
+       <% end %>
+    </div>
   </div>
-  <% end %>
+</div>
 </div>
 </div>

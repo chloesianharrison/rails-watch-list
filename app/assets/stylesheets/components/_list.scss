@@ -1,0 +1,12 @@
+.list{
+  border: 1px solid rgb(108, 71, 145);
+
+  &:hover{
+    border: 4px solid rgb(108, 71, 145);
+
+    a {
+    color: rgb(108, 71, 145);
+    font-size: 2.5rem;
+    }
+  }
+}
