@@ -1,0 +1,61 @@
+.list-card {
+  position: absolute;
+  padding: 25%;
+  z-index: -2;
+  background-color: rgb(108, 71, 145);
+  border-radius: 20px;
+}
+
+.topbackcard {
+  top: 3.9rem;
+  left: 3rem;
+}
+
+.bottombackcard {
+  top: 40rem;
+  right: 0rem;
+}
+
+.cardwidth{
+  width: 18rem;
+}
+
+// media queries
+
+@media (max-width: 1220px){
+  .bottombackcard {
+    top: 30rem;
+  }
+}
+
+@media (max-width: 950px){
+  .topbackcard {
+    height: 500px
+  }
+  .bottombackcard {
+    height: 500px;
+    top: 20rem;
+  }
+}
+
+@media (max-width: 690px){
+  .cardwidth{
+    width: 25rem;
+  }
+}
+
+@media (max-width: 590px){
+  .topbackcard {
+    height: 500px
+  }
+  .bottombackcard {
+    top: 20rem;
+    height: 500px;
+  }
+}
+
+@media (max-width: 540px){
+  .cardwidth{
+    width: 20rem;
+  }
+}

@@ -8,19 +8,21 @@
     </div>
   </nav>
 
-<div class="list-card pcard">
+<div class="list-card topbackcard">
 </div>
 
+<div class="list-card bottombackcard">
+</div>
+
+
 <div class="container mt-3">
-<div class="row justify-content-center">
-
-<h1>New Bookmark</h1>
-
-<div class="form-width">
+  <div class="row justify-content-center">
+    <h1>New Movie</h1>
+    <div class="form-width">
 
 <%= simple_form_for [@list, @bookmark] do |f| %>
 <div class="text-start">
-<%= f.association :movie, :label_html => { :class => "label" }  %>
+<%= f.association :movie, :prompt => "Select your movie", :label_html => { :class => "label" }  %>
 <%= f.input :comment, :label_html => { :class => "label" }  %>
 </div>
 <%= f.button :submit, class: "button" %>

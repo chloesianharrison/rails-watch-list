@@ -7,6 +7,30 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+nav a {
+  color: black;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+i {
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+@media (max-width: 490px) {
+  .navbar-lewagon{
+    i {
+      display: none;
+    }
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .navbar-lewagon {
+    justify-content: start;
+  }
 }
