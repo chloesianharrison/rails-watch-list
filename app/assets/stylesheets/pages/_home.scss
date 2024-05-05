@@ -43,13 +43,6 @@ h2 {
   border: 0px;
 
 
-  a {
-    color: black;
-    text-shadow: 1px 1px 2px rgb(37, 37, 37);
-    font-size: 2rem;
-    font-weight: 300;
-    text-decoration: none;
-}
 }
 
 .banbox {
@@ -78,4 +71,16 @@ h2 {
   right: 0rem;
   padding: 25%;
   z-index: -2;
+}
+
+.label{
+  font-family: $body-font;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+
+.form-width {
+  max-width: 700px;
+
 }

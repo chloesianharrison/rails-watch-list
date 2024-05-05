@@ -1,6 +1,25 @@
+<nav class="d-flex navbar-lewagon p-3 bg-light" >
+    <i class="fa-solid fa-film "></i>
+
+    <div class="me-3">
+      <%= link_to "My lists", lists_path, class: "button" %>
+    </div>
+  </nav>
+
+<div class="list-card pcard">
+</div>
+
+
+<div class="container mt-3">
+
 <h1>New List</h1>
 
+
 <%= simple_form_for(@list) do |f| %>
-<%= f.input :name %>
-<%= f.submit %>
+<div class="text-start">
+<%= f.input :name, :label_html => { :class => "label" }  %>
+</div>
+<%= f.button :submit, class: "button" %>
 <% end %>
+
+</div>
